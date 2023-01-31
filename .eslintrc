@@ -1,0 +1,16 @@
+{
+  "extends": ["standard", "standard-react", "react-app"],
+  "plugins": ["react-hooks"],
+  "rules": {
+    "quotes": ["error", "double", { "avoidEscape": true }],
+    "jsx-quotes": ["error", "prefer-double"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error"]
+      }
+    ]
+  }
+}
