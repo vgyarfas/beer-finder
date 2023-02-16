@@ -1,0 +1,14 @@
+@import "src/styles/colors";
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.errorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $errorColor;
+}

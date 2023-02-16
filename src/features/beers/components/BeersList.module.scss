@@ -1,0 +1,55 @@
+@import "src/styles/colors";
+
+.container {
+  width: 100%;
+  min-width: 600px;
+  max-width: 1500px;
+}
+
+.controlRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.perPageContainer {
+  flex: 0 0 100px;
+  margin-right: 10px;
+}
+
+.nameFilterContainer {
+  flex: 1 1 0%;
+  margin-right: 10px;
+}
+
+.buttonContainer {
+  flex: 0 0 auto;
+
+  & > *:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 10px auto 0;
+}
+
+.listContainer {
+  width: 100%;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 1500px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

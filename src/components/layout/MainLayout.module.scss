@@ -1,0 +1,35 @@
+@import "src/styles/colors";
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcomeMessage {
+  margin-right: 20px;
+  color: $textColor;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  align-items: center;
+  justify-content: flex-end;
+  height: 60px;
+  padding: 0 20px;
+  background-color: $headerBackgroundColor;
+  color: $textColor;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.main {
+  width: 100%;
+  max-width: 1500px;
+  padding-top: 60px;
+}

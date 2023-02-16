@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-order",
+    "stylelint-config-property-sort-order-smacss"
+  ],
+  "ignoreFiles": [
+    "**/*.js",
+    "**/*.jsx"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.scss"]
+    }
+  ],
+  "rules": {
+    "color-named": "never",
+    "color-hex-case": "lower",
+    "color-hex-length": "long",
+    "number-leading-zero": "always",
+    "max-nesting-depth": 8,
+    "declaration-no-important": true,
+    "selector-max-id": 0,
+    "string-quotes": "double",
+    "at-rule-no-unknown": null,
+    "selector-pseudo-class-no-unknown": null,
+    "function-no-unknown": null,
+    "selector-class-pattern": null,
+    "import-notation": "string"
+  }
+}

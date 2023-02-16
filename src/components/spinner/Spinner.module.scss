@@ -1,0 +1,30 @@
+.animatedSpinner {
+  transform-origin: center;
+  animation: rotate-around 0.75s infinite linear;
+}
+
+.sizeSm {
+  width: 4px;
+  height: 4px;
+}
+
+.sizeMd {
+  width: 8px;
+  height: 8px;
+}
+
+.sizeLg {
+  width: 16px;
+  height: 16px;
+}
+
+.sizeXl {
+  width: 24px;
+  height: 24px;
+}
+
+@keyframes rotate-around {
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,53 @@
+@import "src/styles/colors";
+
+.backButton {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+}
+
+.infoContainer {
+  display: grid;
+  grid-auto-columns: 1fr 1fr;
+  grid-auto-rows: 1fr 1fr;
+  grid-template: auto auto auto / 300px 1fr;
+  grid-template-areas:
+    "image short-data"
+    "image description"
+    "image food-pairings";
+  gap: 20px;
+
+  @media screen and (max-width: 900px) {
+    grid-template: auto auto auto auto / 1fr;
+    grid-template-areas:
+      "image"
+      "short-data"
+      "description"
+      "food-pairings";
+  }
+}
+
+.image {
+  grid-area: image;
+  width: 100%;
+  max-height: 500px;
+  border-radius: 5px;
+  background-color: $backgroundColor;
+  object-fit: contain;
+}
+
+.shortDataContainer {
+  display: flex;
+  grid-area: short-data;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.descriptionContainer {
+  grid-area: description;
+}
+
+.foodPairingsContainer {
+  grid-area: food-pairings;
+}

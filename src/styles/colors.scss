@@ -1,0 +1,19 @@
+$textColor: #eeeeee;
+$textColorDisabled: lighten($textColor, 20%);
+$backgroundColor: #242424;
+
+$headerBackgroundColor: #454545;
+
+$errorColor: #ee2222;
+
+$linkColor: #646cff;
+$linkHoverColor: #535bf2;
+
+$buttonBackgroundColor: #1a1a1a;
+$buttonBorderColor: transparent;
+$buttonBorderColorHover: #4a52dc;
+
+$listItemBackgroundColor: #333333;
+$listItemBorderColor: #444444;
+$listItemBackgroundColorHover: lighten($listItemBackgroundColor, 5%);
+$listItemBorderColorHover: #4a52dc;
