@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 import { useGetBeersQuery } from '../api'
 
@@ -35,6 +35,10 @@ export const BeersList = ({ onNavigate }: BeersListProps) => {
 
   const beerNameFilter = useDebounce(beerName, 200)
 
+  useEffect(() => {
+    setPage(1)
+  }, [beerNameFilter])
+
   const {
     data: beers,
     isLoading,
@@ -52,13 +56,13 @@ export const BeersList = ({ onNavigate }: BeersListProps) => {
   )
 
   const goPreviousPage = () => {
-    if (page > 1) {
+    if (page > 1 && !isLoading && !isFetching) {
       setPage(page - 1)
     }
   }
 
   const goNextPage = () => {
-    if (page * perPage < TOTAL_BEER_COUNT) {
+    if (page * perPage < TOTAL_BEER_COUNT && !isLoading && !isFetching) {
       setPage(page + 1)
     }
   }
