@@ -11,6 +11,10 @@ describe('Button', () => {
     const { getByRole } = render(<Button isLoading>Primary Button</Button>)
     expect(getByRole('status')).toBeTruthy()
   })
+  it('should not be clickable when loading', () => {
+    const { getByRole } = render(<Button isLoading>Primary Button</Button>)
+    expect(getByRole('button')).toBeDisabled()
+  })
   it('should render children', () => {
     const { getByText } = render(<Button>Primary Button</Button>)
     expect(getByText('Primary Button')).toBeTruthy()

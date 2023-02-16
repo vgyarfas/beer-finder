@@ -15,6 +15,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       type = 'button',
       className = '',
       isLoading = false,
+      disabled = false,
       ...props
     },
     ref
@@ -24,7 +25,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         type={type}
         className={clsx(classes.container, className)}
-        disabled={isLoading}
+        disabled={isLoading || disabled}
         {...props}
       >
         {isLoading && <Spinner size="lg" data-testid="spinner" className={classes.loadingSpinner} />}

@@ -100,7 +100,7 @@ export const BeersList = ({ onNavigate }: BeersListProps) => {
           <Button
             type="button"
             onClick={goPreviousPage}
-            isLoading={isFetching}
+            isLoading={isLoading || isFetching}
             disabled={isFirstPage}
           >
           Previous page
@@ -108,7 +108,7 @@ export const BeersList = ({ onNavigate }: BeersListProps) => {
           <Button
             type="button"
             onClick={goNextPage}
-            isLoading={isFetching}
+            isLoading={isLoading || isFetching}
             disabled={isLastPage}
           >
           Next page
